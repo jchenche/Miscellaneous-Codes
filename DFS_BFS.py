@@ -79,7 +79,7 @@ def main():
             count += 1
 
     print_matrix(G)
-    postOrder = [] # The reverse of this will be the topological sort
+    postOrder = []
     marked = [False for x in range(n)]
     edgeTo = [-1 for x in range(n)]
     queue = Queue()
