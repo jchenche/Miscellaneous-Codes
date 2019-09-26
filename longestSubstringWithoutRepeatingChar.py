@@ -6,11 +6,10 @@ class Solution:
         for i in range(len(s)):
             right = i
             x = s[i]
-            # 1st, makes sure it's seen before
-            # 2nd, makes sure it's within the window defined by left and right
+            # Check if it's seen before and is within the window defined by left and right
             if x in hashmap and hashmap[x] >= left:
                 left = hashmap[x] + 1
-            hashmap[x] = right
-            if right - left  + 1 > longest:
+            elif right - left  + 1 > longest: # Otherwise check if window size is the longest
                 longest = right - left + 1
+            hashmap[x] = i
         return longest
