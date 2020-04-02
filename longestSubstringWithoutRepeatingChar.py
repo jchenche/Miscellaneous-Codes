@@ -1,5 +1,6 @@
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
+        # Given a string, find the length of the longest substring without repeating characters.
         hashmap = {}
         longest = 0
         left = 0
